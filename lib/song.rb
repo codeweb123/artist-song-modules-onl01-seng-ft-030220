@@ -1,4 +1,4 @@
-rclass Song
+class Song
 
   extend Memorable::ClassMethods
   extend Findable::ClassMethods
