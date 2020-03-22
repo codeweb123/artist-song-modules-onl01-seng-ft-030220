@@ -1,20 +1,17 @@
 module Memorable
-
-  module Song
-    def self.reset_all
+  module ClassMethods
+    def reset_all
       self.all.clear
     end
 
-    def self.count
+    def count
       self.all.count
     end
-
-  module Artist
-    def self.reset_all
-      self.all.clear
+  end
+  
+  module InstanceMethods
+    def initialize
+      self.class.all << self
     end
-
-    def self.count
-      self.all.count
-    end
+  end
 end
