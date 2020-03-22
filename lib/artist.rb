@@ -1,6 +1,7 @@
 require 'pry'
 
 class Artist
+  extend Memorable :: Artist
   attr_accessor :name
   attr_reader :songs
 
@@ -40,7 +41,6 @@ class Artist
     name.downcase.gsub(' ', '-')
   end
 
-  extend Memorable :: Artist
-end
   
+end  
 end
